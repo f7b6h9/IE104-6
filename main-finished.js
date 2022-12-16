@@ -72,35 +72,35 @@ class Ball extends Shape {
   }
 
 
-  // collisionDetect() {
-  //    for (const ball of balls) {
-  //       if (!(this === ball) && ball.exists) {
-  //          const dx = this.x - ball.x;
-  //          const dy = this.y - ball.y;
-  //          const distance = Math.sqrt(dx * dx + dy * dy);
+  collisionDetect() {
+     for (const ball of balls) {
+        if (!(this === ball) && ball.exists) {
+           const dx = this.x - ball.x;
+           const dy = this.y - ball.y;
+           const distance = Math.sqrt(dx * dx + dy * dy);
 
-  //          if (distance < this.size + ball.size) {
-  //            ball.color = this.color = randomRGB();
-  //          }
-  //       }
-  //    }
-  // }
-
-}
-
-Ball.prototype.collisionDetect = function() {
-  for (let j = 0; j < balls.length; j++) {
-    if (!(this === balls[j]) && balls[j].exists) {
-      const dx = this.x - balls[j].x;
-      const dy = this.y - balls[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-      if (distance < this.size + balls[j].size) {
-        balls[j].color = this.color = randomRGB();
-      }
-    }
+           if (distance < this.size + ball.size) {
+             ball.color = this.color = randomRGB();
+           }
+        }
+     }
   }
+
 }
+
+// Ball.prototype.collisionDetect = function() {
+//   for (let j = 0; j < balls.length; j++) {
+//     if (!(this === balls[j]) && balls[j].exists) {
+//       const dx = this.x - balls[j].x;
+//       const dy = this.y - balls[j].y;
+//       const distance = Math.sqrt(dx * dx + dy * dy);
+
+//       if (distance < this.size + balls[j].size) {
+//         balls[j].color = this.color = randomRGB();
+//       }
+//     }
+//   }
+// }
 
 class EvilCircle extends Shape {
 
