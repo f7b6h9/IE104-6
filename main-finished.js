@@ -88,20 +88,6 @@ class Ball extends Shape {
 
 }
 
-// Ball.prototype.collisionDetect = function() {
-//   for (let j = 0; j < balls.length; j++) {
-//     if (!(this === balls[j]) && balls[j].exists) {
-//       const dx = this.x - balls[j].x;
-//       const dy = this.y - balls[j].y;
-//       const distance = Math.sqrt(dx * dx + dy * dy);
-
-//       if (distance < this.size + balls[j].size) {
-//         balls[j].color = this.color = randomRGB();
-//       }
-//     }
-//   }
-// }
-
 class EvilCircle extends Shape {
 
   constructor(x, y) {
